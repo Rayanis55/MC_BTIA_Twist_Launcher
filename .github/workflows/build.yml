@@ -14,9 +14,9 @@ jobs:
       - name: Get version
         run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
       
-      - name: Create Release
+      - name: Create a Release in a GitHub Action
         id: create_release
-        uses: actions/create-release@v4.4.1
+        uses: comnoco/create-release-action@v2.0.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
