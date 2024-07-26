@@ -1,0 +1,44 @@
+{
+    "name": "MinecraftTwist-Launcher",
+    "preductname": "MinecraftTwist Launcher",
+    "version": "2.0.7",
+    "description": "The Official Launche for The MinecraftButThereIsATwist Server",
+    "main": "src/app.js",
+    "author": {
+        "name": "MazeGroup (Rayanis55), Inc.",
+        "email": "rayanis55@mazegroup.org",
+        "url": "https://github.com/rayanis55"
+    },
+    "url": "https://minecrafthost1.mazegroup.org/",
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
+        "build": "node build.js --obf=true --build=platform",
+        "icon": "node build.js --icon=https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/512/Minecraft.png"
+    },
+    "license": "CCANC",
+    "nodemonConfig": {
+        "ext": "js,html,css",
+        "ignore": "**/test"
+    },
+    "dependencies": {
+        "electron-updater": "^6.1.8",
+        "minecraft-java-core": "^3.10.4",
+        "node-bdd": "^2.0.4",
+        "node-fetch": "^2.7.0",
+        "xml-js": "^1.6.11"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "electron": "^30.0.9",
+        "electron-builder": "^24.13.3",
+        "javascript-obfuscator": "^4.1.0",
+        "jimp": "^0.22.12",
+        "nodemon": "^3.1.2",
+        "png2icons": "^2.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+\\DESKTOP-V6MT8OA/git-server/mc_btia_twist_launcher.git"
+    }
+}
