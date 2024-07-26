@@ -1,29 +1,29 @@
-# module du helios launcher
+#  module du helios launcher
 name: Launcher Build
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.1.1
 
       - name: Get version
         run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
       
-      - name: Create Release
+      - name: Create a Release in a GitHub Action
         id: create_release
-        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.version }}
-          release_name: release ${{ env.version }}
-          draft: false
-          prerelease: ${{ contains(env.version, 'beta') || contains(env.version, 'alpha') }}
+          tag: ${{ env.version }}
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+              --generate-notes
 
   build-launcher:
     needs: create-release
@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Set up Node
         uses: actions/setup-node@v3
