@@ -1,8 +1,8 @@
 {
-    "name": "MinecraftTwist-Launcher",
+    "name": "MinecraftTwist Launcher",
     "preductname": "MinecraftTwist Launcher",
-    "version": "2.0.7",
-    "description": "The Official Launche for The MinecraftButThereIsATwist Server",
+    "version": "1.0",
+    "description": "The Official Launche for The Minecraft But There Is A Twist Server",
     "main": "src/app.js",
     "author": {
         "name": "MazeGroup (Rayanis55), Inc.",
