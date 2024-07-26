@@ -4,7 +4,7 @@
  */
 
 const { ipcRenderer, shell } = require('electron');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 const os = require('os');
 import { config, database } from './utils.js';
 const nodeFetch = require("node-fetch");

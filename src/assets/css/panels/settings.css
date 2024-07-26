@@ -44,6 +44,7 @@
 
 .active-settings-BTN {
     background: var(--element-color);
+    color: var(--background);
 }
 
 .container-settings {
