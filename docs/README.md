@@ -1,6 +1,6 @@
 <p align="center"><img src="../src/assets/images/icon.png" alt="icon-launcher"></p>
 
-<h1 align="center">CraftLaunch</h1>
+<h1 align="center">CraftLaunch (Project Initiale par @Luuxis)</h1>
 
 [<p align="center">]()
 ![GitHub all releases](https://img.shields.io/github/downloads/luuxis/Selvania-Launcher/total?style=for-the-badge)
@@ -18,7 +18,7 @@
 
 ---
 ### **<ins><p align="center">Conditions d'utilisation:</p>**
-- Pour utiliser le code vous devez faire un fork du projet.
+- Pour utiliser le code vous devez faire un fork du projet. (Désolé j'avais des problème avec le fork du coup je l'ai recréer sans le fork)
 - Pour utiliser le code votre code doit tout le temps être public.
 - Pour utiliser le code toute mention originale de la licence doit être gardé.
 - Pour utiliser le code vous devez garder la licence originale.
