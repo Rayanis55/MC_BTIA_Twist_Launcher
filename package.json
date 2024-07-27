@@ -1,7 +1,7 @@
 {
     "name": "minecraft_btia_twist_launcher",
     "preductname": "Minecraft BTIA Twist Launcher",
-    "version": "1.0.5",
+    "version": "1.1.0",
     "description": "The Official Launche for The Minecraft But There Is A Twist Server",
     "main": "src/app.js",
     "author": {

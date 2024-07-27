@@ -258,9 +258,11 @@
     border-radius: 15px;
     height: 3.2rem;
     padding-right: 1.9rem;
+    transition: 0.5s;
 }
 
 .play-btn {
+    transition: 0.5s;
     border: none;
     border-radius: 10px;
     background: none;
@@ -268,7 +270,10 @@
     font-size: 2rem;
     font-weight: bolder;
     padding: 0 1.5rem;
-    pointer-events: none;
+}
+
+.play-btn:hover {
+    cursor: pointer;
 }
 
 .instance-select {
@@ -371,8 +376,10 @@
 
 .instance-elements:hover {
     background: var(--element-color);
+    color: var(--background)
 }
 
 .active-instance {
     background: var(--element-color);
+    color: var(--background)
 }
