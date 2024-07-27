@@ -14,8 +14,10 @@ jobs:
       - name: Get version
         run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
 
-      - name: Install GitHub CLI
-        run: sudo apt-get install gh -y
+      - name: Authenticate with GitHub CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh auth login --with-token <<< "$GITHUB_TOKEN"
       
       - name: Create a Release in a GitHub Action
         id: create_release
