@@ -303,6 +303,7 @@
 .java-path-btn {
     padding: 0.3rem 1rem;
     background: var(--element-color);
+    color: var(--background);
     border-radius: 15px;
     margin: 0 1rem;
     cursor: pointer;
@@ -340,6 +341,7 @@
 .size-btn {
     padding: 0.3rem 1rem;
     background: var(--element-color);
+    color: var(--background);
     border-radius: 15px;
     margin: 0 1rem;
     cursor: pointer;
@@ -365,6 +367,7 @@
 .max-files-btn {
     padding: 0.3rem 1rem;
     background: var(--element-color);
+    color: var(--background);
     border-radius: 15px;
     margin: 0 1rem;
     cursor: pointer;

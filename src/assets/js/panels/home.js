@@ -31,10 +31,6 @@ class Home {
                         <div class="header-text">
                             <div class="title">Aucun news n'ai actuellement disponible.</div>
                         </div>
-                        <div class="date">
-                            <div class="day">1</div>
-                            <div class="month">Janvier</div>
-                        </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
@@ -52,10 +48,6 @@ class Home {
                             <img class="server-status-icon" src="assets/images/icon.png">
                             <div class="header-text">
                                 <div class="title">${News.title}</div>
-                            </div>
-                            <div class="date">
-                                <div class="day">${date.day}</div>
-                                <div class="month">${date.month}</div>
                             </div>
                         </div>
                         <div class="news-content">
