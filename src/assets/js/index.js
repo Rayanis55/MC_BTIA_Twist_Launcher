@@ -55,8 +55,11 @@ class Splash {
         this.setStatus(`Recherche de mise à jour...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
+            console.error('Erreur lors de la recherche de mise à jour:', err);
+            sleep(3);
+            this.maintenanceCheck();
         });
+        
 
         ipcRenderer.on('updateAvailable', () => {
             this.setStatus(`Mise à jour disponible !`);
