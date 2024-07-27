@@ -4,7 +4,7 @@
  */
 
 const { ipcRenderer, shell } = require('electron');
-const pkg = require('../../package.json');
+const pkg = require('../package.json');
 const os = require('os');
 import { config, database } from './utils.js';
 const nodeFetch = require("node-fetch");
@@ -30,9 +30,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Je... vie...", "author": "Luuxis" },
-            { "message": "Salut je suis du code.", "author": "Luuxis" },
-            { "message": "Linux n'est pas un os, mais un kernel.", "author": "Luuxis" }
+            { "message": "Salut..... Tu... Vas.. Bien ?", "author": "Raynis55" },
+            { "message": "..............................", "author": "Raynis55" },
+            { "message": "Technoblade ne mourra jamais", "author": "Rayanis55" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
