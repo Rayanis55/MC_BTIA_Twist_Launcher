@@ -32,7 +32,8 @@ class Splash {
         let splashes = [
             { "message": "Salut..... Tu... Vas.. Bien ?", "author": "Raynis55" },
             { "message": "..............................", "author": "Raynis55" },
-            { "message": "Technoblade ne mourra jamais", "author": "Rayanis55" }
+            { "message": "Technoblade ne mourra jamais", "author": "Rayanis55" },
+            { "message": "Minecraft est un jeu sans limites", "author": "Rayanis55" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
