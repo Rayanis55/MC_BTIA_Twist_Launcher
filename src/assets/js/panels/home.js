@@ -296,6 +296,7 @@ class Home {
                 ipcRenderer.send("main-window-show")
             };
             ipcRenderer.send('main-window-progress-reset')
+            playInstanceBTN_f.style.display = "none"
             infoStartingBOX.style.display = "none"
             playInstanceBTN.style.display = "flex"
             infoStarting.innerHTML = `Vérification`
@@ -317,6 +318,7 @@ class Home {
                 ipcRenderer.send("main-window-show")
             };
             ipcRenderer.send('main-window-progress-reset')
+            playInstanceBTN_f.style.display = "none"
             infoStartingBOX.style.display = "none"
             playInstanceBTN.style.display = "flex"
             infoStarting.innerHTML = `Vérification`
