@@ -7,6 +7,7 @@ const { app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
 const os = require("os");
 const pkg = require("../../../../package.json");
+const { NONAME } = require("dns");
 let dev = process.env.DEV_TOOL === 'open';
 let mainWindow = undefined;
 
@@ -26,9 +27,11 @@ function createWindow() {
         title: pkg.preductname,
         width: 1280,
         height: 720,
+        maxWidth: 1280,
+        maxHeight: 720,
         minWidth: 980,
         minHeight: 552,
-        resizable: true,
+        resizable: false,
         icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"}`,
         frame: os.platform() !== 'win32',
         show: false,
@@ -45,7 +48,11 @@ function createWindow() {
             if (dev) mainWindow.webContents.openDevTools({ mode: 'detach' })
             mainWindow.show()
         }
+    });  
+    mainWindow.on('maximize', () => {
+        mainWindow.unmaximize()
     });
+    mainWindow.isma
 }
 
 module.exports = {
