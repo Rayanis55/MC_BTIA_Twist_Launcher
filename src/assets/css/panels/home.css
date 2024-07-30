@@ -1,15 +1,33 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 .home .container {
     display: flex;
     height: 100%;
-    flex-direction: column;
-    align-items: center;
 }
 
-/*******************************************************************************
- *                                                                             *
- * Status server                                                               *
- *                                                                             *
- ******************************************************************************/
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 100%;
+    background: var(--background-transparent);
+    gap: 20px; 
+}
+
+.home-bottom {
+    position: relative;
+    width: calc(100% - 90px);
+    height: calc(100% - 80px - 8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 90px;
+}
 
 .status-server {
     position: relative;
@@ -24,6 +42,7 @@
     margin-top: 3rem;
     padding: 1rem;
     text-align: center;
+    right: 147px;
 }
 
 .server-status-icon {
@@ -72,23 +91,11 @@
     background: #FF0409;
 }
 
-.home-bottom {
-    position: relative;
-    width: 100%;
-    height: calc(100% - 80px - 8rem);
-    display: flex;
-}
-
-/*******************************************************************************
- *                                                                             *
- * news server                                                                 *
- *                                                                             *
- ******************************************************************************/
-
 .new-tab {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 85%;
     height: 100%;
 }
@@ -100,6 +107,8 @@
     border-radius: 2rem;
     background: var(--background-transparent);
     color: var(--color);
+    margin-right: 600px;
+    padding-bottom: 15px;
 }
 
 .news-list {
@@ -107,6 +116,7 @@
     height: 100%;
     border-radius: 10px;
     margin: 1rem 0;
+    margin-right: 47px;
 }
 
 .news-block {
@@ -140,13 +150,11 @@
     padding: 0 1.5rem;
     padding-bottom: 1rem;
     font-size: 1.2rem;
-
 }
 
 .news-content .bbWrapper p {
     font-weight: 100;
     margin: 0;
-
 }
 
 .news-content .bbWrapper .news-author {
@@ -158,12 +166,6 @@
 .news-content .bbWrapper .news-author span {
     font-weight: 700;
 }
-
-/*******************************************************************************
- *                                                                             *
- * social server                                                               *
- *                                                                             *
- ******************************************************************************/
 
 .social-tab {
     position: absolute;
@@ -202,28 +204,12 @@
     filter: var(--svg-color);
 }
 
-/*******************************************************************************
- *                                                                             *
- * sidebar                                                                     *
- *                                                                             *
- ******************************************************************************/
-
-.sidebar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    background: var(--background-transparent);
-}
-
 .player-options {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 15px;
     height: 3rem;
-    margin: 0 1.5rem;
 }
 
 .player-head {
@@ -247,6 +233,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px; 
 }
 
 .play-instance {
@@ -254,22 +242,31 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border: solid 3px var(--element-color);
-    border-radius: 15px;
     height: 3.2rem;
     padding-right: 1.9rem;
-    transition: 0.5s;
+    margin: 230px 0 230px 0
+}
+
+.play-instance-f {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 3.2rem;
+    padding-right: 1.9rem;
+    margin: 230px 0 230px 0;
+    margin-left: 30px;
 }
 
 .play-btn {
-    transition: 0.5s;
     border: none;
-    border-radius: 10px;
     background: none;
     color: var(--color);
     font-size: 2rem;
     font-weight: bolder;
     padding: 0 1.5rem;
+    padding: 50px;
+    font-size: 3rem;
 }
 
 .play-btn:hover {
@@ -324,7 +321,10 @@
     height: 3rem;
     font-size: 3rem;
     color: var(--element-color);
-    margin: 0 1.5rem;
+}
+
+.settings-btn:hover {
+    cursor: pointer;
 }
 
 .instance-popup {
@@ -382,4 +382,16 @@
 .active-instance {
     background: var(--element-color);
     color: var(--background)
+}
+
+.part2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 90px);
+    height: 100%;
+    margin-left: 75px;
+    padding: 1rem;
+    right: 200px;
 }

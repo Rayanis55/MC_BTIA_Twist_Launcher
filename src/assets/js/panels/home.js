@@ -197,6 +197,7 @@ class Home {
         let options = instance.find(i => i.name == configClient.instance_selct)
 
         let playInstanceBTN = document.querySelector('.play-instance')
+        let playInstanceBTN_f = document.querySelector('.play-instance-f')
         let infoStartingBOX = document.querySelector('.info-starting-game')
         let infoStarting = document.querySelector(".info-starting-game-text")
         let progressBar = document.querySelector('.progress-bar')
@@ -238,6 +239,7 @@ class Home {
         launch.Launch(opt);
 
         playInstanceBTN.style.display = "none"
+        playInstanceBTN_f.style.display = "flex"
         infoStartingBOX.style.display = "block"
         progressBar.style.display = "";
         ipcRenderer.send('main-window-progress-load')
