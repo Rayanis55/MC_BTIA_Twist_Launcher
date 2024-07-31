@@ -30,12 +30,13 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Salut..... Tu... Vas.. Bien ?", "author": "Raynis55" },
+            { "message": "Hey..... How..... Are........ You...... ?", "author": "Raynis55" },
             { "message": "..............................", "author": "Raynis55" },
-            { "message": "Technoblade ne mourra jamais", "author": "Rayanis55" },
-            { "message": "Minecraft est un jeu sans limites", "author": "Rayanis55"},
+            { "message": "Technoblade never die", "author": "Rayanis55" },
+            { "message": "Minecraft is a game without limites", "author": "Rayanis55"},
             { "message": "English or Spanish?", "author": "Rayanis55"},
-            { "message": "1 in 6 chance of getting this one", "author": "Rayanis55"}
+            { "message": "Herobrine has taken over Minecraft", "author": "Rayanis55"},
+            { "message": "1 in 7 chance of getting this one", "author": "Rayanis55"}
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
